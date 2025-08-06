@@ -1,0 +1,207 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e3f0ff 0%, #f8f9fa 100%);
+  color: #212529;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Component */
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.07);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  text-decoration: none;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+  letter-spacing: 2px;
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.header-nav li {
+  margin-left: 30px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header-nav a:hover {
+  background: #e3f0ff;
+  color: #0056b3;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon.open .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger-icon.open .bar2 {
+  opacity: 0;
+}
+.hamburger-icon.open .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 576px) {
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #f8f9fa;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.07);
+    border-radius: 0 0 12px 12px;
+  }
+  .header-nav.open {
+    display: block;
+  }
+  .header-nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .header-nav li {
+    margin: 15px 0;
+    font-size: 1.2em;
+  }
+  .hamburger-icon {
+    display: block;
+    z-index: 1001;
+  }
+}
+
+/* Section Styling */
+section {
+  padding: 80px 0;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, #f8f9fa 80%, #e3f0ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.07);
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #007bff;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: linear-gradient(120deg, #e3f0ff 60%, #f8f9fa 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.05);
+}
+
+.hero-tagline {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.hero-subtitle {
+  font-size: 1.3em;
+  color: #495057;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Achievements Section */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.achievement-card {
+  padding: 30px;
+  background: #e3f0ff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.12);
+}
+
+.achievement-card h3 {
+  font-size: 2.2em;
+  color: #007bff;
+  margin: 0 0 10px;
+}
+
+.achievement-card p {
+  font-size: 1.1em;
+  color: #495057;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #e3f0ff 0%, #007bff 100%);
+  color: #fff;
+  margin-top: 50px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 -2px 8px rgba(0, 123, 255, 0.07);
+}

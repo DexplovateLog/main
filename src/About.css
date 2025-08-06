@@ -1,0 +1,134 @@
+/* About Page Specific Styling */
+.about-hero {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #212529;
+}
+
+.about-hero p {
+  font-size: 1.2em;
+  color: #6c757d;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section for "Our Mission" and "Our Story" */
+.mission-story-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 80px 0;
+}
+
+.mission-story-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.mission-story-container:nth-child(even) {
+  flex-direction: row-reverse; /* Reverses the layout for the second section */
+}
+
+.mission-story-image {
+  flex: 1;
+}
+
+.mission-story-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mission-story-content {
+  flex: 1;
+}
+
+.mission-story-content h2 {
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.mission-story-content p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Team Section */
+.team-section {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #f1f7fe;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.team-member-card {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.team-member-card p {
+  font-size: 1em;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.5em;
+  }
+  .mission-story-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .mission-story-container:nth-child(even) {
+    flex-direction: column;
+  }
+  .mission-story-content h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
