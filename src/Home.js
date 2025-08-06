@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <a href='/' className="header-logo">Dexplovate</a>
+        <a href='/main' className="header-logo">Dexplovate</a>
         <div
           className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`}
           onClick={toggleMenu}
