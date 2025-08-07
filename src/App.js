@@ -1,5 +1,5 @@
 // frontend/src/App.js
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+ import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Product from './Product';
 import About from "./About.js";
@@ -8,14 +8,14 @@ import Contact from "./contactPage.js";
 // Main App component that sets up the routes for the application
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/main" element={<Home />} />
-        <Route path="/main/products" element={<Product />} />
-        <Route path="/main/about" element={<About />} />
-        <Route path="/main/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Product />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

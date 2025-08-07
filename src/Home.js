@@ -27,10 +27,10 @@ const Header = () => {
         </div>
         <nav className={`header-nav ${isMenuOpen ? 'open' : ''}`}>
           <ul>
-            <li><a href="/main" onClick={toggleMenu}>Home</a></li>
-            <li><a href="/main/products" onClick={toggleMenu}>Products</a></li>
-            <li><a href="/main/about" onClick={toggleMenu}>About us</a></li>
-            <li><a href="/main/contact" onClick={toggleMenu}>Contact us</a></li>
+            <li><a href="/" onClick={toggleMenu}>Home</a></li>
+            <li><a href="/products" onClick={toggleMenu}>Products</a></li>
+            <li><a href="/about" onClick={toggleMenu}>About us</a></li>
+            <li><a href="/contact" onClick={toggleMenu}>Contact us</a></li>
           </ul>
         </nav>
       </div>
